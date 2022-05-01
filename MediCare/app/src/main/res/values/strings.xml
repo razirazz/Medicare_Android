@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">MediCare</string>
     <string name="app_name_sub">Online consultancy and Medicine purchase</string>
     <string name="log_in">Log IN</string>
@@ -62,6 +63,19 @@
     <string name="sign_up_moto">Hello guys! Welcome to MediCare App</string>
     <string name="image_moto">Upload your Photo for more clarification</string>
     <string name="change_pass_head">Change your Password here…</string>
+    <string name="doc_head">View your Doctors here…</string>
+    <string name="med_head">View your Medicines here…</string>
+    <string name="hos_name">Hospital Name</string>
+    <string name="doc_name">Doctor Name</string>
+    <string name="amount">Amount</string>
+    <string name="brand">Brand</string>
+    <string name="description">Description</string>
+    <string name="discount_head">Check your Discount</string>
+    <string name="hospital_head">Hopsitals</string>
+    <string name="pharm_head">Pharmacies</string>
+    <string name="doc_book_head">Your doctor booking details</string>
+    <string name="med_book_head">Your medicine booking details</string>
+    <string name="done">Done</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>

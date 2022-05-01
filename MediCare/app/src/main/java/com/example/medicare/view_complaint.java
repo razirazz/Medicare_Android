@@ -28,6 +28,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
 public class view_complaint extends AppCompatActivity implements View.OnClickListener {
     ListView lv;
     FloatingActionButton fav;
@@ -35,7 +36,7 @@ public class view_complaint extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onBackPressed() {
-        Intent ij=new Intent(getApplicationContext(), patient_home.class);
+        Intent ij = new Intent(getApplicationContext(), patient_home.class);
         startActivity(ij);
     }
 
@@ -43,17 +44,14 @@ public class view_complaint extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_complaint);
-        lv=(ListView) findViewById(R.id.lv);
-        fav=(FloatingActionButton) findViewById(R.id.floatingActionButton2);
+        lv = (ListView) findViewById(R.id.lv);
+        fav = (FloatingActionButton) findViewById(R.id.floatingActionButton2);
         fav.setOnClickListener(this);
 
 
-
-
-        SharedPreferences sh= PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         String hu = sh.getString("ip", "");
         String url = "http://" + hu + ":5000/and_view_complaint";
-
 
 
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
@@ -68,22 +66,21 @@ public class view_complaint extends AppCompatActivity implements View.OnClickLis
                             JSONObject jsonObj = new JSONObject(response);
                             if (jsonObj.getString("status").equalsIgnoreCase("ok")) {
 
-                                JSONArray js= jsonObj.getJSONArray("data");
-                                cid=new String[js.length()];
-                                complaint=new String[js.length()];
-                                reply=new String[js.length()];
-                                date=new String[js.length()];
+                                JSONArray js = jsonObj.getJSONArray("data");
+                                cid = new String[js.length()];
+                                complaint = new String[js.length()];
+                                reply = new String[js.length()];
+                                date = new String[js.length()];
 
-                                for(int i=0;i<js.length();i++)
-                                {
-                                    JSONObject u=js.getJSONObject(i);
-                                    cid[i]=u.getString("com_id");
-                                    complaint[i]=u.getString("complaint");
-                                    reply[i]=u.getString("reply");
-                                    date[i]=u.getString("comp_date");
+                                for (int i = 0; i < js.length(); i++) {
+                                    JSONObject u = js.getJSONObject(i);
+                                    cid[i] = u.getString("com_id");
+                                    complaint[i] = u.getString("complaint");
+                                    reply[i] = u.getString("reply");
+                                    date[i] = u.getString("comp_date");
 
                                 }
-                                lv.setAdapter(new custom_view_complaints(getApplicationContext(),cid,complaint,date,reply));
+                                lv.setAdapter(new custom_view_complaints(getApplicationContext(), cid, complaint, date, reply));
                             }
 
 
@@ -92,7 +89,7 @@ public class view_complaint extends AppCompatActivity implements View.OnClickLis
                                 Toast.makeText(getApplicationContext(), "Not found", Toast.LENGTH_LONG).show();
                             }
 
-                        }    catch (Exception e) {
+                        } catch (Exception e) {
                             Toast.makeText(getApplicationContext(), "Error" + e.getMessage().toString(), Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -110,14 +107,14 @@ public class view_complaint extends AppCompatActivity implements View.OnClickLis
                 SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                 Map<String, String> params = new HashMap<String, String>();
 
-                params.put("lid", sh.getString("lid",""));
+                params.put("lid", sh.getString("lid", ""));
 //                params.put("mac",maclis);
 
                 return params;
             }
         };
 
-        int MY_SOCKET_TIMEOUT_MS=100000;
+        int MY_SOCKET_TIMEOUT_MS = 100000;
 
         postRequest.setRetryPolicy(new DefaultRetryPolicy(
                 MY_SOCKET_TIMEOUT_MS,
@@ -128,7 +125,7 @@ public class view_complaint extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-        Intent ij=new Intent(getApplicationContext(), send_complaint.class);
+        Intent ij = new Intent(getApplicationContext(), send_complaint.class);
         startActivity(ij);
     }
 }

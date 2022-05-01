@@ -131,8 +131,9 @@ public class view_Medicine_Profile extends AppCompatActivity {
                                     JSONObject jsonObj = new JSONObject(response);
                                     String sucs = jsonObj.getString("status");
                                     if (sucs.equalsIgnoreCase("ok")) {
-                                        Toast.makeText(getApplicationContext(), "medicine purchase request success", Toast.LENGTH_LONG).show();
-
+//                                        Toast.makeText(getApplicationContext(), "medicine purchase request success", Toast.LENGTH_LONG).show();
+                                             Intent i = new Intent(getApplicationContext(), requestSuccessFile.class);
+                                             startActivity(i);
                                     } else {
                                         Toast.makeText(getApplicationContext(), "medicine purchase request error", Toast.LENGTH_LONG).show();
                                     }

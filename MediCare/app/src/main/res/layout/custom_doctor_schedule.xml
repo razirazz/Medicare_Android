@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black_2F"
     tools:context=".custom_doctor_schedule">
 
     <TextView
@@ -13,6 +14,8 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="50dp"
         android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,7 +26,23 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_schedule_doc_name" />
+
+    <TextView
+        android:id="@+id/custom_schedule_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/custom_schedule_hosp_name"
         app:layout_constraintTop_toBottomOf="@+id/custom_schedule_doc_name" />
 
     <TextView
@@ -33,20 +52,10 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/custom_schedule_hosp_name" />
-
-    <TextView
-        android:id="@+id/custom_schedule_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="40dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/custom_schedule_hosp_name"
-        app:layout_constraintTop_toBottomOf="@+id/custom_schedule_doc_name" />
 
     <TextView
         android:id="@+id/custom_schedule_ftime"
@@ -55,6 +64,8 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/custom_schedule_ttime"
         app:layout_constraintTop_toBottomOf="@+id/custom_schedule_date" />
 
@@ -63,20 +74,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginEnd="50dp"
         android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/custom_schedule_date" />
 
     <Button
         android:id="@+id/custom_book_doctor_btn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="40dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="50dp"
         android:text="@string/doc_book"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/custom_schedule_doc_name"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/black_0"
+        app:layout_constraintTop_toBottomOf="@+id/custom_schedule_ftime"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
