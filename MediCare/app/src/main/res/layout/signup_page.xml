@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_2F"
+    tools:context=".signup_page">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="198dp"
+        tools:layout_editor_absoluteY="219dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="0dp"
+                android:text="@string/sign_up_head"
+                android:textSize="30sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/sign_up_moto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="0dp"
+                android:text="@string/sign_up_moto"
+                android:textSize="15sp"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="414dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/signup"
+                app:srcCompat="@drawable/signup" />
+
+            <TextView
+                android:id="@+id/image_moto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="0dp"
+                android:text="@string/image_moto"
+                android:textSize="15sp"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:id="@+id/sign_user_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
+            <EditText
+                android:id="@+id/sign_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/black_0"
+                android:ems="10"
+                android:hint="@string/name"
+                android:inputType="textPersonName"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/yellow" />
+
+            <EditText
+                android:id="@+id/sign_user_contact"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/black_0"
+                android:ems="10"
+                android:hint="@string/contact"
+                android:inputType="textPersonName"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/yellow" />
+
+            <EditText
+                android:id="@+id/sign_user_mail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/black_0"
+                android:ems="10"
+                android:hint="@string/mail"
+                android:inputType="textPersonName"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/yellow" />
+
+            <RadioGroup
+                android:id="@+id/sign_user_gender"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/black_0"
+                android:orientation="horizontal"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/yellow">
+
+                <RadioButton
+                    android:id="@+id/sign_user_gender_male"
+                    android:layout_width="125dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/black_0"
+                    android:text="@string/male"
+                    android:textColor="@color/yellow"
+                    android:textColorHint="@color/yellow" />
+
+                <RadioButton
+                    android:id="@+id/sign_user_gender_female"
+                    android:layout_width="125dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/black_0"
+                    android:text="@string/female"
+                    android:textColor="@color/yellow"
+                    android:textColorHint="@color/yellow" />
+
+                <RadioButton
+                    android:id="@+id/sign_user_gender_other"
+                    android:layout_width="125dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/black_0"
+                    android:text="@string/other"
+                    android:textColor="@color/yellow"
+                    android:textColorHint="@color/yellow" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/sign_user_dob"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/black_0"
+                android:ems="10"
+                android:hint="@string/dob"
+                android:inputType="textPersonName"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/yellow" />
+
+            <EditText
+                android:id="@+id/sign_user_address"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/black_0"
+                android:ems="10"
+                android:hint="@string/address"
+                android:inputType="textPersonName"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/yellow" />
+
+            <EditText
+                android:id="@+id/sign_user_place"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/black_0"
+                android:ems="10"
+                android:hint="@string/place"
+                android:inputType="textPersonName"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/yellow" />
+
+            <EditText
+                android:id="@+id/sign_user_post"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/black_0"
+                android:ems="10"
+                android:hint="@string/post"
+                android:inputType="textPersonName"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/yellow" />
+
+            <EditText
+                android:id="@+id/sign_user_district"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/black_0"
+                android:ems="10"
+                android:hint="@string/district"
+                android:inputType="textPersonName"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/yellow" />
+
+            <EditText
+                android:id="@+id/sign_user_pin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/black_0"
+                android:ems="10"
+                android:hint="@string/pin"
+                android:inputType="textPersonName"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/yellow"
+                tools:ignore="TextFields" />
+
+            <Button
+                android:id="@+id/sign_user_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/yellow"
+                android:text="@string/sign_in"
+                android:textColor="@color/black_0" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
