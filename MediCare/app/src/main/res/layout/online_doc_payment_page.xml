@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black_2F"
     tools:context=".online_doc_Payment_page">
 
     <TextView
@@ -12,6 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="50dp"
+        android:textColor="@color/white"
+        android:textSize="30dp"
         android:text="Bank"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -23,19 +26,31 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/yellow"
+        android:textColorHint="@color/yellow"
+        android:textColorHighlight="@color/black_2F"
+        android:backgroundTint="@color/black_0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
+
     <EditText
         android:id="@+id/payement_ac_number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="@string/ac_no"
         android:inputType="textPersonName"
+        android:textColor="@color/yellow"
+        android:textColorHint="@color/yellow"
+        android:textColorHighlight="@color/black_2F"
+        android:backgroundTint="@color/black_0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,12 +58,17 @@
 
     <EditText
         android:id="@+id/payement_ac_pin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="@string/ac_pin_no"
+        android:textColor="@color/yellow"
+        android:textColorHint="@color/yellow"
+        android:textColorHighlight="@color/black_2F"
+        android:backgroundTint="@color/black_0"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -57,11 +77,18 @@
 
     <Button
         android:id="@+id/payement_pay_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
         android:layout_marginTop="30dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:text="@string/pay"
+        android:textColor="@color/black_0"
+        android:backgroundTint="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/payement_ac_pin" />
+        app:layout_constraintTop_toBottomOf="@+id/payement_ac_pin"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

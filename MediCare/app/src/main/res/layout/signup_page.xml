@@ -68,7 +68,7 @@
             <ImageView
                 android:id="@+id/sign_user_image"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="10dp"
@@ -81,7 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="@color/black_0"
@@ -250,17 +250,46 @@
                 android:hint="@string/pin"
                 android:inputType="textPersonName"
                 android:textColor="@color/yellow"
-                android:textColorHint="@color/yellow"
-                tools:ignore="TextFields" />
+                android:textColorHint="@color/yellow" />
 
-            <Button
-                android:id="@+id/sign_user_btn"
+            <EditText
+                android:id="@+id/sign_user_pass"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/black_0"
+                android:ems="10"
+                android:hint="@string/pass"
+                android:inputType="textPersonName"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/yellow" />
+
+            <EditText
+                android:id="@+id/sign_user_confirm_pass"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/black_0"
+                android:ems="10"
+                android:hint="@string/confirm_pass"
+                android:inputType="textPersonName"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/yellow"/>
+
+            <Button
+                android:id="@+id/sign_user_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="30dp"
                 android:backgroundTint="@color/yellow"
                 android:text="@string/sign_in"
                 android:textColor="@color/black_0" />

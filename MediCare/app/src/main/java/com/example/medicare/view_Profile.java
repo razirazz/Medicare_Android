@@ -139,6 +139,8 @@ public class view_Profile extends AppCompatActivity {
                                 ed.putString("district", district);
                                 ed.putString("pin", pin);
                                 ed.putString("post", post);
+                                ed.putString("pic", pic);
+
                                 ed.putString("gender", gender);
                                 ed.commit();
 

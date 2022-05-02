@@ -67,7 +67,7 @@ public class view_Doctor_Profile extends AppCompatActivity {
                                 String doc_name = jsonObj.getString("doc_name");
                                 doc_Name.setTextColor(Color.WHITE);
                                 doc_Name.setText(doc_name);
-                                System.out.println(doc_name);
+//                                System.out.println("--------------------------------docname"+doc_name);
 //                                Toast.makeText(getApplicationContext(), "doc_name", Toast.LENGTH_SHORT).show();
 
                                 String hos_name = jsonObj.getString("hos_name");

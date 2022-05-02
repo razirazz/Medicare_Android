@@ -4,37 +4,37 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_home_black_24dp"
-            android:title="@string/menu_home" />
-        <item
-            android:id="@+id/nav_profile"
-            android:icon="@drawable/profile"
-            android:title="@string/view_profile" />
-        <item
-            android:id="@+id/nav_change_pass"
-            android:icon="@drawable/password"
-            android:title="@string/change_pass" />
-        <item
-            android:id="@+id/nav_doctor"
-            android:icon="@drawable/doctor"
-            android:title="@string/view_doc" />
-        <item
-            android:id="@+id/nav_medicine"
-            android:icon="@drawable/medicine"
-            android:title="@string/view_med" />
-        <item
-            android:id="@+id/nav_hospital"
-            android:icon="@drawable/hospital"
-            android:title="@string/near_hosp" />
-        <item
-            android:id="@+id/nav_pharmacy"
-            android:icon="@drawable/pharmacy"
-            android:title="@string/near_pharm" />
-        <item
-            android:id="@+id/nav_log_out"
-            android:icon="@drawable/logout"
-            android:title="@string/log_out" />
+<!--        <item-->
+<!--            android:id="@+id/nav_home"-->
+<!--            android:icon="@drawable/ic_home_black_24dp"-->
+<!--            android:title="@string/menu_home" />-->
+<!--        <item-->
+<!--            android:id="@+id/nav_profile"-->
+<!--            android:icon="@drawable/profile"-->
+<!--            android:title="@string/view_profile" />-->
+<!--        <item-->
+<!--            android:id="@+id/nav_change_pass"-->
+<!--            android:icon="@drawable/password"-->
+<!--            android:title="@string/change_pass" />-->
+<!--        <item-->
+<!--            android:id="@+id/nav_doctor"-->
+<!--            android:icon="@drawable/doctor"-->
+<!--            android:title="@string/view_doc" />-->
+<!--        <item-->
+<!--            android:id="@+id/nav_medicine"-->
+<!--            android:icon="@drawable/medicine"-->
+<!--            android:title="@string/view_med" />-->
+<!--        <item-->
+<!--            android:id="@+id/nav_hospital"-->
+<!--            android:icon="@drawable/hospital"-->
+<!--            android:title="@string/near_hosp" />-->
+<!--        <item-->
+<!--            android:id="@+id/nav_pharmacy"-->
+<!--            android:icon="@drawable/pharmacy"-->
+<!--            android:title="@string/near_pharm" />-->
+<!--        <item-->
+<!--            android:id="@+id/nav_log_out"-->
+<!--            android:icon="@drawable/logout"-->
+<!--            android:title="@string/log_out" />-->
     </group>
 </menu>

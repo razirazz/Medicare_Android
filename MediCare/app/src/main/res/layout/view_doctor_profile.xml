@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black_2F"
     tools:context=".view_Doctor_Profile">
 
     <ImageView
         android:id="@+id/doctor_profile_img"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="157dp"
+        android:layout_height="179dp"
         android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,6 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/doctor_profile_img" />
@@ -32,6 +35,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/doc_profile_name" />
@@ -42,6 +47,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/doc_profile_Hos_name" />
@@ -52,6 +59,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/doc_profile_department" />
@@ -62,9 +71,23 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/doc_profile_qualification" />
+
+    <TextView
+        android:id="@+id/doc_profile_fees"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doc_profile_experience" />
 
     <TextView
         android:id="@+id/doc_profile_contact"
@@ -72,6 +95,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/doc_profile_fees" />
@@ -82,18 +107,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/doc_profile_contact" />
-
-    <TextView
-        android:id="@+id/doc_profile_fees"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/doc_profile_experience" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

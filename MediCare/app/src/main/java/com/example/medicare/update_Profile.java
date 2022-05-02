@@ -44,13 +44,14 @@ public class update_Profile extends AppCompatActivity implements View.OnClickLis
     RadioButton male, female, other;
     Button update;
     String gen_strg = "";
-    String path, atype, fname, attach = "no";
+    String path, atype, fname, attach="aa";
     byte[] byteArray = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.update_profile);
+
 
         pat_img = (ImageView) findViewById(R.id.update_img);
         name = (EditText) findViewById(R.id.update_name);
@@ -68,7 +69,6 @@ public class update_Profile extends AppCompatActivity implements View.OnClickLis
         update = (Button) findViewById(R.id.update_btn);
         update.setOnClickListener(this);
 
-        attach = "aa";
         SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         name.setText(sh.getString("name", ""));
         address.setText(sh.getString("address", ""));
@@ -91,10 +91,16 @@ public class update_Profile extends AppCompatActivity implements View.OnClickLis
             other.setChecked(true);
         }
 
+//        String pic = jsonObj.getString("photo");
+//        String url="http://" + hu + ":5000" + pic;
+//        Picasso.with(getApplicationContext()).load(url).into(pat_img);
+//
+//        Toast.makeText(view_Profile.this, "-----------------"+pic, Toast.LENGTH_SHORT).show();
+
         String img = sh.getString("pic", "");
         String ip = sh.getString("ip", "");
         String url = "http://" + ip + ":5000" + sh.getString("pic", "");
-        Toast.makeText(this, "----url--------" + img, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "----url--------"+img, Toast.LENGTH_SHORT).show();
         Picasso.with(getApplicationContext()).load(url).into(pat_img);
 
         pat_img.setOnClickListener(this);
@@ -257,6 +263,12 @@ public class update_Profile extends AppCompatActivity implements View.OnClickLis
             }
         }
 
+
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent ii=new Intent(getApplicationContext(), patient_main_home.class);
+        startActivity(ii);
+    }
 }

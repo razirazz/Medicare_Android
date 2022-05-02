@@ -86,10 +86,9 @@ public class login_page extends AppCompatActivity implements View.OnClickListene
                                         SharedPreferences.Editor ed = sh.edit();
                                         ed.putString("lid", lid);
                                         ed.commit();
-                                        Intent ij = new Intent(getApplicationContext(), LocationService.class);
-                                        startService(ij);
+
                                         if (jsonObj.getString("type").equalsIgnoreCase("patient")) {
-                                            Intent ij1 = new Intent(getApplicationContext(), patient_home.class);
+                                            Intent ij1 = new Intent(getApplicationContext(), patient_main_home.class);
                                             startActivity(ij1);
                                         }
                                     } else {

@@ -20,10 +20,10 @@ tools:context=".send_complaint">
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editTextTextPersonName71"
-        android:layout_width="313dp"
-        android:gravity="left|top"
-        android:layout_height="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890_ -@."
+        android:gravity="left|top"
         android:inputType="textMultiLine" />
 </com.google.android.material.textfield.TextInputLayout>
 

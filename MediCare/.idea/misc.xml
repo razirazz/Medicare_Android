@@ -9,12 +9,14 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/activity_homepage.xml" value="0.23505434782608695" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/activity_main_home.xml" value="0.23505434782608695" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/activity_test.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/app_bar_main_home.xml" value="0.23505434782608695" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/appbar_homepage.xml" value="0.23505434782608695" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/change_password.xml" value="0.264" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/complaint.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/content_home_page.xml" value="0.23505434782608695" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/content_main_home.xml" value="0.23505434782608695" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/content_patient_main_home.xml" value="0.13958333333333334" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/custom_ciew_complaint.xml" value="0.2463768115942029" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/custom_doctor_booking.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/custom_doctor_schedule.xml" value="0.2418478260869565" />
@@ -38,13 +40,16 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/ip_connect.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/login_page.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/nav_header_main_home.xml" value="0.23505434782608695" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/nav_header_patient_main_home.xml" value="0.13958333333333334" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/navheader_homepage.xml" value="0.23505434782608695" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/online_doc_payment_page.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/online_med_payment_page.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/online_payement_page.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/online_payment_page.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/patient_home.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/patient_main_home.xml" value="0.13958333333333334" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/request_success_file.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/row_message.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/send_complaint.xml" value="0.2463768115942029" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/signup_page.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/layout/update_profile.xml" value="0.25416666666666665" />
@@ -66,6 +71,8 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/menu/activity_main_drawer.xml" value="0.25052083333333336" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1953125" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/menu/main_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/menu/patient_main_home.xml" value="0.14322916666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/MediCare/app/src/main/res/menu/patient_main_home_drawer.xml" value="0.13958333333333334" />
       </map>
     </option>
   </component>

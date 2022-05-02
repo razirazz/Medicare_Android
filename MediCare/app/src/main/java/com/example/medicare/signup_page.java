@@ -49,7 +49,7 @@ import java.util.Map;
 public class signup_page extends AppCompatActivity implements View.OnClickListener {
 
     ImageView pat_img;
-    EditText name, contact, gender, mail, dob, address, place, post, district, pin;
+    EditText name, contact, gender, mail, dob, address, place, post, district, pin, pass, confirm_pass;
     RadioButton male, female, other;
     Button sign_in;
     String strg_gender = "";
@@ -76,9 +76,12 @@ public class signup_page extends AppCompatActivity implements View.OnClickListen
         post = (EditText) findViewById(R.id.sign_user_post);
         district = (EditText) findViewById(R.id.sign_user_district);
         pin = (EditText) findViewById(R.id.sign_user_pin);
+        pass = findViewById(R.id.sign_user_pass);
+        confirm_pass = findViewById(R.id.sign_user_confirm_pass);
         sign_in = (Button) findViewById(R.id.sign_user_btn);
 
         sign_in.setOnClickListener(this);
+        pat_img.setOnClickListener(this);
 
         final Calendar myCalendar = Calendar.getInstance();
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
@@ -109,7 +112,7 @@ public class signup_page extends AppCompatActivity implements View.OnClickListen
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         //getting all types of files
 
-        intent.setType("/");
+        intent.setType("*/*");
         intent.addCategory(Intent.CATEGORY_OPENABLE);
 
         try {
@@ -130,17 +133,21 @@ public class signup_page extends AppCompatActivity implements View.OnClickListen
         if (view == pat_img) {
             showfilechooser(1);
         }
-        if (view == sign_in) {
+        else {
             final String sign_name = name.getText().toString();
             final String sign_contact = contact.getText().toString();
             final String sign_mail = mail.getText().toString();
             final String sign_dob = dob.getText().toString();
-            final String sign_gender = gender.getText().toString();
+            final String sign_gen_male = male.getText().toString();
+            final String sign_gen_female = female.getText().toString();
+            final String sign_gen_other = other.getText().toString();
             final String sign_address = address.getText().toString();
             final String sign_place = place.getText().toString();
             final String sign_post = post.getText().toString();
             final String sign_district = district.getText().toString();
             final String sign_pin = pin.getText().toString();
+            final String sign_pass = pass.getText().toString();
+            final String sign_confirm_pass = confirm_pass.getText().toString();
 
             if (male.isChecked()) {
                 gen = "Male";
@@ -156,8 +163,6 @@ public class signup_page extends AppCompatActivity implements View.OnClickListen
                 contact.setError("Fields cannot be Empty!");
             } else if (sign_mail.length() == 0) {
                 mail.setError("Fields cannot be Empty!");
-            } else if (sign_gender.length() == 0) {
-                gender.setError("Fields cannot be Empty!");
             } else if (sign_dob.length() == 0) {
                 dob.setError("Fields cannot be Empty!");
             } else if (sign_address.length() == 0) {
@@ -170,74 +175,81 @@ public class signup_page extends AppCompatActivity implements View.OnClickListen
                 district.setError("Fields cannot be Empty!");
             } else if (sign_pin.length() == 0) {
                 pin.setError("Fields cannot be Empty!");
-            } else {
+            } else if (sign_pass.length() == 0) {
+                pass.setError("Fields cannot be Empty!");
+            } else if (sign_confirm_pass.length() == 0) {
+                pass.setError("Fields cannot be Empty!");
+            }else {
+                    SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                    String hu = sh.getString("ip", "");
+                    String url = "http://" + hu + ":5000/patient_signup";
 
-                SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-                String hu = sh.getString("ip", "");
-                String url = "http://" + hu + ":5000/patient_signup";
+                    RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+                    StringRequest postRequest = new StringRequest(Request.Method.POST, url,
+                            new Response.Listener<String>() {
+                                @Override
+                                public void onResponse(String response) {
+                                    try {
+                                        JSONObject jsonObj = new JSONObject(response);
+                                        if (jsonObj.getString("status").equalsIgnoreCase("ok")) {
 
-                RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-                StringRequest postRequest = new StringRequest(Request.Method.POST, url,
-                        new Response.Listener<String>() {
-                            @Override
-                            public void onResponse(String response) {
-                                try {
-                                    JSONObject jsonObj = new JSONObject(response);
-                                    if (jsonObj.getString("status").equalsIgnoreCase("ok")) {
+                                            Toast.makeText(getApplicationContext(), "Registered", Toast.LENGTH_LONG).show();
+                                            Intent i = new Intent(getApplicationContext(), login_page.class);
+                                            startActivity(i);
+                                        } else {
+                                            Toast.makeText(getApplicationContext(), "Not found", Toast.LENGTH_LONG).show();
+                                        }
 
-                                        Toast.makeText(getApplicationContext(), "Registered", Toast.LENGTH_LONG).show();
-                                        Intent i = new Intent(getApplicationContext(), login_page.class);
-                                        startActivity(i);
-                                    } else {
-                                        Toast.makeText(getApplicationContext(), "Not found", Toast.LENGTH_LONG).show();
+                                    } catch (Exception e) {
+                                        Toast.makeText(getApplicationContext(), "Error" + e.getMessage().toString(), Toast.LENGTH_SHORT).show();
                                     }
-
-                                } catch (Exception e) {
-                                    Toast.makeText(getApplicationContext(), "Error" + e.getMessage().toString(), Toast.LENGTH_SHORT).show();
+                                }
+                            },
+                            new Response.ErrorListener() {
+                                @Override
+                                public void onErrorResponse(VolleyError error) {
+                                    // error
+                                    Toast.makeText(getApplicationContext(), "eeeee" + error.toString(), Toast.LENGTH_SHORT).show();
                                 }
                             }
-                        },
-                        new Response.ErrorListener() {
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
-                                // error
-                                Toast.makeText(getApplicationContext(), "eeeee" + error.toString(), Toast.LENGTH_SHORT).show();
-                            }
+                    ) {
+
+                        @NonNull
+                        @Override
+                        protected Map<String, String> getParams() {
+                            SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                            Map<String, String> params = new HashMap<String, String>();
+
+                            params.put("name", sign_name);
+                            params.put("contact", sign_contact);
+                            params.put("e_mail", sign_mail);
+                            params.put("dob", sign_dob);
+                            params.put("address", sign_address);
+                            params.put("place", sign_place);
+                            params.put("post", sign_post);
+                            params.put("district", sign_district);
+                            params.put("pin", sign_pin);
+                            params.put("gender", gen);
+                            params.put("lid", sh.getString("lid", ""));
+                            params.put("photo", attach);
+                            params.put("password", sign_pass);
+                            params.put("confirm_pass", sign_confirm_pass);
+
+                            return params;
                         }
-                ) {
+                    };
 
-                    @NonNull
-                    @Override
-                    protected Map<String, String> getParams() {
-                        SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-                        Map<String, String> params = new HashMap<String, String>();
+                    int MY_SOCKET_TIMEOUT_MS = 100000;
 
-                        params.put("name", sign_name);
-                        params.put("phn", sign_contact);
-                        params.put("mail", sign_mail);
-                        params.put("gender", sign_gender);
-                        params.put("dob", sign_dob);
-                        params.put("address", sign_address);
-                        params.put("place", sign_place);
-                        params.put("post", sign_post);
-                        params.put("district", sign_district);
-                        params.put("pin", sign_pin);
+                    postRequest.setRetryPolicy(new DefaultRetryPolicy(
+                            MY_SOCKET_TIMEOUT_MS,
+                            DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                            DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+                    requestQueue.add(postRequest);
 
-                        return params;
-                    }
-                };
-
-                int MY_SOCKET_TIMEOUT_MS = 100000;
-
-                postRequest.setRetryPolicy(new DefaultRetryPolicy(
-                        MY_SOCKET_TIMEOUT_MS,
-                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-                requestQueue.add(postRequest);
-
+                }
             }
         }
-    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

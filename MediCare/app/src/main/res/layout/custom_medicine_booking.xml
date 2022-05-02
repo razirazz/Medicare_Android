@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black_2F"
     tools:context=".custom_medicine_booking">
 
     <TextView
@@ -11,8 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,6 +28,8 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,6 +42,8 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/custom_med_book_brand" />
 
@@ -47,6 +54,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/custom_med_book_quantity"
@@ -55,14 +64,19 @@
     <Button
         android:id="@+id/custom_med_book_pay_btn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="40dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/yellow"
         android:text="@string/pay"
+        android:textColor="@color/black_0"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/custom_med_book_date"
-        app:layout_constraintTop_toBottomOf="@+id/custom_med_book_amount" />
+        app:layout_constraintTop_toBottomOf="@+id/custom_med_book_amount"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/custom_med_book_date"
@@ -71,6 +85,8 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/custom_med_book_quantity" />
 </androidx.constraintlayout.widget.ConstraintLayout>

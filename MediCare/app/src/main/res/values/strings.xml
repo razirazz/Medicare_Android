@@ -41,7 +41,7 @@
     <string name="log_out">Log Out</string>
     <string name="cart">Add to Cart</string>
     <string name="buy">Buy Now</string>
-    <string name="Chat">Chat And Payment</string>
+    <string name="Chat">Chat</string>
     <string name="schedule">View Schedule</string>
     <string name="complaint">Submit Complaint</string>
     <string name="add_complaint">Write your feedback…</string>
@@ -76,10 +76,13 @@
     <string name="doc_book_head">Your doctor booking details</string>
     <string name="med_book_head">Your medicine booking details</string>
     <string name="done">Done</string>
+    <string name="doc_sche_head">Doctor Schedule</string>
+    <string name="book_succes">Booking Success</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="todo">TODO</string>
+    <string name="title_activity_patient_main_home">patient_main_home</string>
 
 </resources>

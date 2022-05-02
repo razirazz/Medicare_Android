@@ -26,7 +26,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="40dp"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/custom_doc_img" />
 
@@ -38,7 +38,7 @@
         android:layout_marginStart="16dp"
         android:text="TextView"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/custom_doc_img" />
@@ -52,7 +52,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="20dp"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -64,7 +64,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginStart="28dp"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/custom_doc_name" />
@@ -77,7 +77,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="20dp"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -89,7 +89,7 @@
         android:layout_marginStart="0dp"
         android:text="TextView"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/custom_doc_dep" />
@@ -98,27 +98,44 @@
         android:id="@+id/custom_doc_view_more"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/yellow"
         android:text="@string/view_more"
         android:textColor="@color/black_0"
-        android:backgroundTint="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btcustom_doc_view_schedule"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="50dp"
-        android:text="@string/schedule"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        android:textColor="@color/black_0"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
         android:backgroundTint="@color/yellow"
+        android:text="@string/schedule"
+        android:textColor="@color/black_0"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/custom_doc_view_more"
-        app:layout_constraintTop_toBottomOf="@+id/custom_doc_hos" />
+        app:layout_constraintTop_toBottomOf="@+id/custom_doc_hos"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/pat_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/Chat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btcustom_doc_view_schedule"
+        app:layout_constraintTop_toBottomOf="@+id/custom_doc_hos"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,6 +18,11 @@
         android:theme="@style/Theme.MediCare"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".patient_main_home"
+            android:exported="false"
+            android:label="@string/title_activity_patient_main_home"
+            android:theme="@style/Theme.MediCare.NoActionBar" />
+        <activity
             android:name=".requestSuccessFile"
             android:exported="false" />
         <activity
@@ -35,6 +40,12 @@
         <activity
             android:name=".view_MedicineBooking"
             android:exported="false" />
+
+        <activity
+            android:name=".Test"
+            android:exported="false" />
+
+
         <activity
             android:name=".view_DoctorBooking"
             android:exported="false" />
@@ -80,6 +91,9 @@
         <!-- android:exported="false" /> -->
         <activity
             android:name=".view_Medicine"
+            android:exported="false" />
+        <activity
+            android:name=".send_complaint"
             android:exported="false" />
         <activity
             android:name=".view_Doctor"

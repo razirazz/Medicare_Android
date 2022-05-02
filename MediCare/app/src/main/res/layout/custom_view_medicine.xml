@@ -26,7 +26,7 @@
         android:layout_marginTop="20dp"
         android:text="@string/name"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -39,7 +39,7 @@
         android:layout_marginEnd="88dp"
         android:text="TextView"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView8"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -52,7 +52,7 @@
         android:layout_marginTop="20dp"
         android:text="@string/brand"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -65,7 +65,7 @@
         android:layout_marginStart="40dp"
         android:text="TextView"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView9"
         app:layout_constraintTop_toBottomOf="@+id/custom_med_name" />
@@ -78,7 +78,7 @@
         android:layout_marginTop="20dp"
         android:text="@string/amount"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -91,7 +91,7 @@
         android:layout_marginStart="22dp"
         android:text="TextView"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/custom_med_view_brand" />
@@ -100,14 +100,17 @@
         android:id="@+id/custom_med_view_more_btn"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/yellow"
         android:text="@string/view_more"
+        android:textColor="@color/black_0"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        android:textColor="@color/black_0"
-        android:backgroundTint="@color/yellow"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/custom_med_view_price" />
+        app:layout_constraintTop_toBottomOf="@+id/custom_med_view_price"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
