@@ -5,15 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.Animation;
 import android.widget.Button;
 
-public class requestSuccessFile extends AppCompatActivity {
+public class requestSuccessFilemed extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.request_success_file);
+        setContentView(R.layout.request_success_med);
         View animationView = findViewById(R.id.animationView);
 
         Button done = findViewById(R.id.done);
@@ -21,10 +20,16 @@ public class requestSuccessFile extends AppCompatActivity {
         done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), view_DoctorBooking.class);
+                Intent i = new Intent(getApplicationContext(), view_MedicineBooking.class);
                 startActivity(i);
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(getApplicationContext(), view_MedicineBooking.class);
+        startActivity(i);
     }
 }

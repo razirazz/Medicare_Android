@@ -9,13 +9,13 @@
 
     <ImageView
         android:id="@+id/doctor_profile_img"
-        android:layout_width="157dp"
-        android:layout_height="179dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:srcCompat="@drawable/profileimage" />
 
     <TextView
         android:id="@+id/doc_profile_name"
@@ -24,7 +24,7 @@
         android:layout_marginTop="50dp"
         android:text="TextView"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/doctor_profile_img" />
@@ -36,7 +36,7 @@
         android:layout_marginTop="25dp"
         android:text="TextView"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/doc_profile_name" />
@@ -48,7 +48,7 @@
         android:layout_marginTop="25dp"
         android:text="TextView"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/doc_profile_Hos_name" />
@@ -60,7 +60,7 @@
         android:layout_marginTop="25dp"
         android:text="TextView"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/doc_profile_department" />
@@ -72,7 +72,7 @@
         android:layout_marginTop="25dp"
         android:text="TextView"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/doc_profile_qualification" />
@@ -84,7 +84,7 @@
         android:layout_marginTop="25dp"
         android:text="TextView"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/doc_profile_experience" />
@@ -96,7 +96,7 @@
         android:layout_marginTop="25dp"
         android:text="TextView"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/doc_profile_fees" />
@@ -108,7 +108,7 @@
         android:layout_marginTop="25dp"
         android:text="TextView"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/doc_profile_contact" />

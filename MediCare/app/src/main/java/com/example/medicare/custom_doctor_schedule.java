@@ -96,11 +96,11 @@ public class custom_doctor_schedule extends BaseAdapter {
                 int pos = (int) view.getTag();
                 SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(Context.getApplicationContext());
                 SharedPreferences.Editor ed = sh.edit();
-                ed.putString("doc_book_id", doc_id.get(pos));
+                ed.putString("doctorlid", doc_id.get(pos));
                 ed.putString("doc_sch_id", sch_id.get(pos));
                 ed.putString("hos_id", hos_id.get(pos));
-                ed.putString("doctorlid", doc_id.get(pos));
                 ed.commit();
+                Toast.makeText(Context.getApplicationContext(), "-------------dov--------------------------------"+doc_id.get(pos), Toast.LENGTH_SHORT).show();
 
                 String hu = sh.getString("ip", "");
                 String url = "http://" + hu + ":5000/patient_book_doctors";
@@ -114,8 +114,12 @@ public class custom_doctor_schedule extends BaseAdapter {
                                     JSONObject jsonObj = new JSONObject(response);
                                     String sucs = jsonObj.getString("status");
                                     if (sucs.equalsIgnoreCase("ok")) {
-                                        Toast.makeText(Context.getApplicationContext(), "Doctor Booking Success", Toast.LENGTH_LONG).show();
 
+                                        Intent i = new Intent(Context.getApplicationContext(), view_DoctorBooking.class);
+                                        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                        Context.startActivity(i);
+
+                                        Toast.makeText(Context.getApplicationContext(), "Doctor Booking Success", Toast.LENGTH_LONG).show();
                                     }
                                     else
                                     {
@@ -141,10 +145,9 @@ public class custom_doctor_schedule extends BaseAdapter {
                         SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(Context.getApplicationContext());
                         Map<String, String> params = new HashMap<String, String>();
 
+                        params.put("doctorlid", doc_id.get(pos));
                         params.put("sch_id", sch_id.get(pos));
                         params.put("hos_id", hos_id.get(pos));
-                        params.put("doctorlid", doc_id.get(pos));
-
                         params.put("lid", sh.getString("lid",""));
                         return params;
                     }
@@ -157,11 +160,6 @@ public class custom_doctor_schedule extends BaseAdapter {
                         DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                         DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
                 requestQueue.add(postRequest);
-
-
-
-
-
             }
         });
 

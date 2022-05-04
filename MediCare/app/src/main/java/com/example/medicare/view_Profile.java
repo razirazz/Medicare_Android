@@ -72,9 +72,7 @@ public class view_Profile extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        //  Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
 
-                        // response
                         try {
                             JSONObject jsonObj = new JSONObject(response);
                             if (jsonObj.getString("status").equalsIgnoreCase("ok")) {
@@ -126,9 +124,6 @@ public class view_Profile extends AppCompatActivity {
                                 String url="http://" + hu + ":5000" + pic;
                                 Picasso.with(getApplicationContext()).load(url).into(pat_img);
 
-                                Toast.makeText(view_Profile.this, "-----------------"+pic, Toast.LENGTH_SHORT).show();
-
-
                                 ed.putString("name", name);
                                 ed.putString("address", address);
                                 ed.putString("contact", contact);
@@ -140,7 +135,6 @@ public class view_Profile extends AppCompatActivity {
                                 ed.putString("pin", pin);
                                 ed.putString("post", post);
                                 ed.putString("pic", pic);
-
                                 ed.putString("gender", gender);
                                 ed.commit();
 
@@ -165,11 +159,7 @@ public class view_Profile extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                 Map<String, String> params = new HashMap<String, String>();
-
-
                 params.put("lid", sh.getString("lid", ""));
-
-
                 return params;
             }
         };
@@ -181,8 +171,6 @@ public class view_Profile extends AppCompatActivity {
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         requestQueue.add(postRequest);
-
-
     }
 }
 

@@ -70,7 +70,7 @@ public class view_MedicineBooking extends AppCompatActivity {
                                     name.add(jo.getString("med_name"));
                                     brand.add(jo.getString("med_brand"));
                                     date.add(jo.getString("date"));
-                                    amount.add(jo.getString("total_amount"));
+                                    amount.add(jo.getString("cost"));
                                     quantity.add(jo.getString("quantity"));
                                 }
                                 lv_medBook.setAdapter((ListAdapter) new custom_medicine_booking(getApplicationContext(), book_id, name, brand, quantity, amount, date));

@@ -78,6 +78,8 @@
     <string name="done">Done</string>
     <string name="doc_sche_head">Doctor Schedule</string>
     <string name="book_succes">Booking Success</string>
+    <string name="quantity_head">Select your Quantity</string>
+    <string name="quantity">Quantity</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>

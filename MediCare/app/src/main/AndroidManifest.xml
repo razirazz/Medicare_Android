@@ -18,12 +18,18 @@
         android:theme="@style/Theme.MediCare"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".request_success_doc"
+            android:exported="false" />
+        <activity
+            android:name=".selectQuantity"
+            android:exported="false" />
+        <activity
             android:name=".patient_main_home"
             android:exported="false"
             android:label="@string/title_activity_patient_main_home"
             android:theme="@style/Theme.MediCare.NoActionBar" />
         <activity
-            android:name=".requestSuccessFile"
+            android:name=".requestSuccessFilemed"
             android:exported="false" />
         <activity
             android:name=".view_complaint"
@@ -40,12 +46,9 @@
         <activity
             android:name=".view_MedicineBooking"
             android:exported="false" />
-
         <activity
             android:name=".Test"
             android:exported="false" />
-
-
         <activity
             android:name=".view_DoctorBooking"
             android:exported="false" />

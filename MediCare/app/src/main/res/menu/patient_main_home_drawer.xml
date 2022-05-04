@@ -21,9 +21,17 @@
             android:icon="@drawable/doctor"
             android:title="@string/view_doc" />
         <item
+            android:id="@+id/nav_book_doctor"
+            android:icon="@drawable/doctorfemale64"
+            android:title="@string/view_doc_book" />
+        <item
             android:id="@+id/nav_medicine"
             android:icon="@drawable/medicine"
             android:title="@string/view_med" />
+        <item
+            android:id="@+id/nav_book_medicine"
+            android:icon="@drawable/medbooking50"
+            android:title="@string/view_med_book" />
         <item
             android:id="@+id/nav_hospital"
             android:icon="@drawable/hospital"

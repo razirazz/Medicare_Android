@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" 
-    android:background="@drawable/chatbg">
+    android:background="@color/black_2F">
 
                 <LinearLayout
                     android:id="@+id/tab1"
@@ -20,15 +20,18 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" >
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp">
 
                         <EditText
                             android:id="@+id/input_chat_message"
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
                             android:layout_marginRight="10dp"
                             android:layout_weight="1"
-                            android:ems="10" >
+                            android:ems="10"
+                            android:textColor="@color/yellow"
+                            android:layout_marginStart="10dp">
 
                             <requestFocus />
                         </EditText>
@@ -37,7 +40,8 @@
                             android:id="@+id/button_chat_send"
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/folder"/>
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/emailsend"/>
 
                     </LinearLayout>
                 </LinearLayout>

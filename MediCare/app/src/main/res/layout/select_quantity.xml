@@ -5,22 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black_2F"
-    tools:context=".requestSuccessFile">
-
+    tools:context=".selectQuantity">
 
     <TextView
         android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
-        android:text="@string/book_succes"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/quantity_head"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="10dp"
         android:textColor="@color/white"
-        android:textSize="30dp"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textAlignment="center"
+        android:textSize="20dp"/>
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
@@ -34,23 +34,19 @@
         app:layout_constraintWidth_percent="0.5"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/successyellow"
+        app:lottie_rawRes="@raw/quantity"
         tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/done"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="100dp"
-        android:backgroundTint="@color/yellow"
-        android:text="@string/done"
-        android:textColor="@color/black_0"
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/animationView"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/animationView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

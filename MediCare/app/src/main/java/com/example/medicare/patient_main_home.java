@@ -44,26 +44,11 @@ public class patient_main_home extends AppCompatActivity implements NavigationVi
         NavigationView navigationView = binding.navView;
         navigationView.setNavigationItemSelectedListener(this);
 
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
                 .setOpenableLayout(drawer)
                 .build();
-//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_patient_main_home);
-//        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-//        NavigationUI.setupWithNavController(navigationView, navController);
     }
-
-//
-
-
-//    @Override
-//    public boolean onSupportNavigateUp() {
-//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_patient_main_home);
-//        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
-//                || super.onSupportNavigateUp();
-//    }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -81,8 +66,14 @@ public class patient_main_home extends AppCompatActivity implements NavigationVi
         }else if (id == R.id.nav_doctor) {
             Intent ij=new Intent(getApplicationContext(), view_Doctor.class);
             startActivity(ij);
+        }else if (id == R.id.nav_book_doctor) {
+            Intent ij=new Intent(getApplicationContext(), view_DoctorBooking.class);
+            startActivity(ij);
         }else if (id == R.id.nav_medicine) {
             Intent ij=new Intent(getApplicationContext(), view_Medicine.class);
+            startActivity(ij);
+        }else if (id == R.id.nav_book_medicine) {
+            Intent ij=new Intent(getApplicationContext(), view_MedicineBooking.class);
             startActivity(ij);
         }else if (id == R.id.nav_hospital) {
             Intent ij=new Intent(getApplicationContext(), view_near_Hospital.class);
@@ -94,12 +85,6 @@ public class patient_main_home extends AppCompatActivity implements NavigationVi
             Intent ij=new Intent(getApplicationContext(),  login_page.class);
             startActivity(ij);
         }
-//        else if (id == R.id.nav_chat) {
-//            Intent ij=new Intent(getApplicationContext(),  Test.class);
-//            startActivity(ij);
-//        }
-
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

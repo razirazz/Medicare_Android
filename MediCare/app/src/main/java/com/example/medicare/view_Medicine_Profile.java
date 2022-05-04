@@ -12,6 +12,7 @@ import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,6 +34,7 @@ public class view_Medicine_Profile extends AppCompatActivity {
 
     ImageView med_img;
     TextView med_name, med_brand, med_description, med_price;
+    EditText med_quantity;
     Button buy, cart;
 
     @Override
@@ -44,6 +46,7 @@ public class view_Medicine_Profile extends AppCompatActivity {
         med_brand = findViewById(R.id.med_profile_med_brand);
         med_description = findViewById(R.id.med_profile_descr);
         med_price = findViewById(R.id.med_profile_med_price);
+        med_quantity = findViewById(R.id.quantity);
         buy = findViewById(R.id.med_profile_medicine_book_btn);
         cart = findViewById(R.id.med_profile_cart_btn);
 
@@ -116,8 +119,9 @@ public class view_Medicine_Profile extends AppCompatActivity {
                 String medid = sh.getString("med_id", "");
                 String pharid = sh.getString("pharm_lid", "");
                 String price = sh.getString("price", "");
+                String quantity = med_quantity.getText().toString();
 
-//                Toast.makeText(view_Medicine_Profile.this, "---------price-----"+price, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(view_Medicine_Profile.this, "---------quantity-----"+quantity, Toast.LENGTH_SHORT).show();
 
                 String hu = sh.getString("ip", "");
                 String url = "http://" + hu + ":5000/patient_med_buy";
@@ -132,7 +136,7 @@ public class view_Medicine_Profile extends AppCompatActivity {
                                     String sucs = jsonObj.getString("status");
                                     if (sucs.equalsIgnoreCase("ok")) {
 //                                        Toast.makeText(getApplicationContext(), "medicine purchase request success", Toast.LENGTH_LONG).show();
-                                             Intent i = new Intent(getApplicationContext(), requestSuccessFile.class);
+                                             Intent i = new Intent(getApplicationContext(), view_MedicineBooking.class);
                                              startActivity(i);
                                     } else {
                                         Toast.makeText(getApplicationContext(), "medicine purchase request error", Toast.LENGTH_LONG).show();
@@ -160,6 +164,7 @@ public class view_Medicine_Profile extends AppCompatActivity {
                         params.put("pharm_lid", sh.getString("pharm_lid", ""));
                         params.put("price", sh.getString("price", ""));
                         params.put("lid", sh.getString("lid", ""));
+                        params.put("quantity", quantity);
                         return params;
                     }
                 };

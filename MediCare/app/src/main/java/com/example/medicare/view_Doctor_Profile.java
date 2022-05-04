@@ -46,8 +46,8 @@ public class view_Doctor_Profile extends AppCompatActivity {
         email = findViewById(R.id.doc_profile_mail);
 
         SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        String medid = sh.getString("doctorlid", "");
-//        System.out.println("========================================================================medid"+medid);
+        String doctorlid = sh.getString("doctorlid", "");
+//        System.out.println("--------------------------------------------"+doctorlid);
         String hu = sh.getString("ip", "");
         String url = "http://" + hu + ":5000/patient_view_doctor_profile";
 
@@ -57,9 +57,7 @@ public class view_Doctor_Profile extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        //  Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
 
-                        // response
                         try {
                             JSONObject jsonObj = new JSONObject(response);
                             if (jsonObj.getString("status").equalsIgnoreCase("ok")) {
@@ -67,8 +65,6 @@ public class view_Doctor_Profile extends AppCompatActivity {
                                 String doc_name = jsonObj.getString("doc_name");
                                 doc_Name.setTextColor(Color.WHITE);
                                 doc_Name.setText(doc_name);
-//                                System.out.println("--------------------------------docname"+doc_name);
-//                                Toast.makeText(getApplicationContext(), "doc_name", Toast.LENGTH_SHORT).show();
 
                                 String hos_name = jsonObj.getString("hos_name");
                                 hos_Name.setTextColor(Color.WHITE);
@@ -121,7 +117,7 @@ public class view_Doctor_Profile extends AppCompatActivity {
                 SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                 Map<String, String> params = new HashMap<String, String>();
 
-                params.put("lid", sh.getString("doctorlid", ""));
+                params.put("doctorlid", sh.getString("doctorlid", ""));
 
                 return params;
             }

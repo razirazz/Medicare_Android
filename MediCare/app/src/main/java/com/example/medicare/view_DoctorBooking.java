@@ -74,8 +74,6 @@ public class view_DoctorBooking extends AppCompatActivity {
                                     date.add(jo.getString("book_date"));
                                     time.add(jo.getString("book_time"));
                                     amount.add(jo.getString("fees"));
-
-                                    Toast.makeText(view_DoctorBooking.this, "-------"+book_id, Toast.LENGTH_SHORT).show();
                                 }
                                 lv_docBooking.setAdapter((ListAdapter) new custom_doctorBooking(getApplicationContext(), book_id, name, status, date, time, amount));
                             } else {

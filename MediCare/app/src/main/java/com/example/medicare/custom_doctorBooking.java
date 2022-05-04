@@ -81,8 +81,6 @@ public class custom_doctorBooking extends BaseAdapter {
                 ed.putString("med_book_id", book_id.get(pos));
                 ed.putString("amount", amount.get(pos));
                 ed.commit();
-                Toast.makeText(Context.getApplicationContext(), "---book_id---"+book_id, Toast.LENGTH_SHORT).show();
-
                 Intent i = new Intent(Context.getApplicationContext(), online_doc_Payment_page.class);
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 Context.startActivity(i);

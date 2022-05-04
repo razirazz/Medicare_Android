@@ -91,16 +91,9 @@ public class update_Profile extends AppCompatActivity implements View.OnClickLis
             other.setChecked(true);
         }
 
-//        String pic = jsonObj.getString("photo");
-//        String url="http://" + hu + ":5000" + pic;
-//        Picasso.with(getApplicationContext()).load(url).into(pat_img);
-//
-//        Toast.makeText(view_Profile.this, "-----------------"+pic, Toast.LENGTH_SHORT).show();
-
         String img = sh.getString("pic", "");
         String ip = sh.getString("ip", "");
         String url = "http://" + ip + ":5000" + sh.getString("pic", "");
-        Toast.makeText(this, "----url--------"+img, Toast.LENGTH_SHORT).show();
         Picasso.with(getApplicationContext()).load(url).into(pat_img);
 
         pat_img.setOnClickListener(this);

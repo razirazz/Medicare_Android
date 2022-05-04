@@ -119,30 +119,48 @@
         app:layout_constraintStart_toEndOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/med_profile_med_price" />
 
+    <EditText
+        android:id="@+id/quantity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/black_0"
+        android:ems="10"
+        android:hint="@string/quantity_head"
+        android:inputType="textPersonName"
+        android:textColor="@color/yellow"
+        android:textColorHint="@color/yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
     <Button
         android:id="@+id/med_profile_cart_btn"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="40dp"
+        android:backgroundTint="@color/yellow"
         android:text="@string/cart"
         android:textColor="@color/black_0"
-        android:backgroundTint="@color/yellow"
         app:layout_constraintEnd_toStartOf="@+id/med_profile_medicine_book_btn"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintTop_toBottomOf="@+id/quantity" />
 
     <Button
         android:id="@+id/med_profile_medicine_book_btn"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="90dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/yellow"
         android:text="@string/buy"
         android:textColor="@color/black_0"
-        android:backgroundTint="@color/yellow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/med_profile_descr" />
+        app:layout_constraintTop_toBottomOf="@+id/quantity" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

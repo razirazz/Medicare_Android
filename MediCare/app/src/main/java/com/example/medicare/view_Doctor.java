@@ -98,7 +98,7 @@ public class view_Doctor extends AppCompatActivity implements TextWatcher {
                 SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                 Map<String, String> params = new HashMap<>();
                 params.put("lid", sh.getString("lid", ""));
-//                params.put("doclid", sh.getString("doclid", ""));
+//                params.put("doctorlid", sh.getString("login_id", ""));
 
                 return params;
             }
@@ -183,6 +183,7 @@ public class view_Doctor extends AppCompatActivity implements TextWatcher {
                 SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                 Map<String, String> params = new HashMap<>();
                 params.put("lid", sh.getString("lid", ""));
+//                params.put("doctorlid", sh.getString("login_id", ""));
                 params.put("name", editable.toString());
                 return params;
             }

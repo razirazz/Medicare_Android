@@ -2,6 +2,7 @@ package com.example.medicare;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -71,6 +72,8 @@ public class online_doc_Payment_page extends AppCompatActivity implements View.O
                             try {
                                 JSONObject jsonObj = new JSONObject(response);
                                 if (jsonObj.getString("status").equalsIgnoreCase("ok")) {
+                                    Intent i = new Intent(getApplicationContext(), request_success_doc.class);
+                                    startActivity(i);
 
                                     Toast.makeText(online_doc_Payment_page.this, "Done..!!", Toast.LENGTH_SHORT).show();
                                 } else if (jsonObj.getString("status").equalsIgnoreCase("less")) {

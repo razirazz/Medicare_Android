@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".update_Profile"
+    android:background="@color/black_2F"
     tools:layout_editor_absoluteX="31dp"
     tools:layout_editor_absoluteY="131dp">
 
@@ -27,19 +28,23 @@
 
             <ImageView
                 android:id="@+id/update_img"
-                android:layout_width="110dp"
-                android:layout_height="97dp"
+                android:layout_width="132dp"
+                android:layout_height="132dp"
                 android:layout_marginTop="20dp"
                 android:layout_gravity="center"
-                android:background="@drawable/folder" />
+                android:background="@drawable/profileimage" />
 
             <EditText
                 android:id="@+id/update_name"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="30dp"
                 android:ems="10"
-                android:hint="Name"
+                android:hint="@string/name"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/black_0"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/yellow"
                 android:inputType="textPersonName" />
 
             <EditText
@@ -48,7 +53,11 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:ems="10"
-                android:hint="Address"
+                android:hint="@string/address"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/black_0"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/yellow"
                 android:inputType="textPersonName" />
 
             <EditText
@@ -57,7 +66,11 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:ems="10"
-                android:hint="Contact Number"
+                android:hint="@string/contact"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/black_0"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/yellow"
                 android:inputType="textPersonName" />
 
             <EditText
@@ -67,6 +80,10 @@
                 android:layout_marginTop="10dp"
                 android:ems="10"
                 android:hint="@string/dob"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/black_0"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/yellow"
                 android:inputType="textPersonName" />
 
             <RadioGroup
@@ -80,19 +97,31 @@
                     android:id="@+id/update_gender_male"
                     android:layout_width="125dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/male" />
+                    android:text="@string/male"
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="@color/black_0"
+                    android:textColor="@color/yellow"
+                    android:textColorHint="@color/yellow" />
 
                 <RadioButton
                     android:id="@+id/update_gender_female"
                     android:layout_width="125dp"
                     android:layout_height="50dp"
-                    android:text="@string/female" />
+                    android:text="@string/female"
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="@color/black_0"
+                    android:textColor="@color/yellow"
+                    android:textColorHint="@color/yellow" />
 
                 <RadioButton
                     android:id="@+id/update_gender_other"
                     android:layout_width="125dp"
                     android:layout_height="50dp"
-                    android:text="@string/other" />
+                    android:text="@string/other"
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="@color/black_0"
+                    android:textColor="@color/yellow"
+                    android:textColorHint="@color/yellow" />
 
             </RadioGroup>
 
@@ -102,8 +131,12 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:ems="10"
-                android:hint="Email"
-                android:inputType="textPersonName" />
+                android:hint="@string/mail"
+                android:inputType="textPersonName"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/black_0"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/yellow" />
 
             <EditText
                 android:id="@+id/update_place"
@@ -111,8 +144,12 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:ems="10"
-                android:hint="Place"
-                android:inputType="textPersonName" />
+                android:hint="@string/place"
+                android:inputType="textPersonName"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/black_0"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/yellow" />
 
             <EditText
                 android:id="@+id/update_post"
@@ -120,8 +157,12 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:ems="10"
-                android:hint="Post"
-                android:inputType="textPersonName" />
+                android:hint="@string/post"
+                android:inputType="textPersonName"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/black_0"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/yellow" />
 
             <EditText
                 android:id="@+id/update_pin"
@@ -129,7 +170,11 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:ems="10"
-                android:hint="Pin"
+                android:hint="@string/pin"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/black_0"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/yellow"
                 android:inputType="textPersonName" />
 
             <EditText
@@ -138,15 +183,24 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:ems="10"
-                android:hint="District"
+                android:hint="@string/district"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/black_0"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/yellow"
                 android:inputType="textPersonName" />
 
             <Button
                 android:id="@+id/update_btn"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="60dp"
                 android:layout_marginTop="20dp"
-                android:text="@string/update" />
+                android:layout_marginBottom="30dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/update"
+                android:textSize="15sp"
+                android:backgroundTint="@color/yellow"
+                android:textColor="@color/black_0" />
 
         </LinearLayout>
     </ScrollView>

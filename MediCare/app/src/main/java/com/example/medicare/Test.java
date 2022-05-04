@@ -67,7 +67,6 @@ public class Test extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
 
-
         SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
         lid = sh.getString("uid", "");
@@ -91,10 +90,7 @@ public class Test extends Activity {
                         SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                         String ip = sh.getString("ip", "");
                         final String sid1 = sh.getString("user", "");
-
-
                         String url = "http://" + ip + ":5000/in_message2";
-
                         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
 
                         StringRequest postRequest = new StringRequest(Request.Method.POST, url,
@@ -113,8 +109,6 @@ public class Test extends Activity {
 
                                                 edtxttosent.setText("");
                                             }
-
-
                                         } catch (Exception e) {
                                             Toast.makeText(getApplicationContext(), "Error" + e.getMessage().toString(), Toast.LENGTH_SHORT).show();
                                         }

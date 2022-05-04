@@ -75,8 +75,8 @@ public class custom_view_doctor extends BaseAdapter {
                 SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(Context.getApplicationContext());
                 SharedPreferences.Editor ed = sh.edit();
                 ed.putString("doctorlid", doctor_id.get(pos));
+//                Toast.makeText(Context.getApplicationContext(), "--------------------------"+doctor_id.get(pos), Toast.LENGTH_SHORT).show();
                 ed.commit();
-//                Toast.makeText(Context.getApplicationContext(), "----doclid---"+doctor_id.get(pos), Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(Context.getApplicationContext(), view_Doctor_Profile.class);
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 Context.startActivity(i);
@@ -92,9 +92,9 @@ public class custom_view_doctor extends BaseAdapter {
                 SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(Context.getApplicationContext());
                 SharedPreferences.Editor ed = sh.edit();
                 ed.putString("doctorlid", doctor_id.get(pos));
-                ed.commit();
-//                Toast.makeText(Context.getApplicationContext(), "---dic_id---"+doctor_id.get(pos), Toast.LENGTH_SHORT).show();
+                Toast.makeText(Context.getApplicationContext(), "--------------------------"+doctor_id.get(pos), Toast.LENGTH_SHORT).show();
 
+                ed.commit();
                 Intent i = new Intent(Context, view_Schedule.class);
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 Context.startActivity(i);
