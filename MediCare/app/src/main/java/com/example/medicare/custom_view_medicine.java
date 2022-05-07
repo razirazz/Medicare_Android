@@ -10,8 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -23,6 +26,7 @@ public class custom_view_medicine extends BaseAdapter {
 
     public custom_view_medicine(android.content.Context applicationcontext, ArrayList<String> med_img, ArrayList<String> phar_lid, ArrayList<String> med_id, ArrayList<String> med_name, ArrayList<String> med_brand, ArrayList<String> med_price) {
         this.Context = applicationcontext;
+        this.med_img = med_img;
         this.med_id = med_id;
         this.phar_lid = phar_lid;
         this.med_name = med_name;
@@ -60,6 +64,7 @@ public class custom_view_medicine extends BaseAdapter {
         } else {
             gridView = (View) view;
         }
+        ImageView lv_med_img = gridView.findViewById(R.id.profile_med_image);
         TextView lv_med_name = gridView.findViewById(R.id.custom_med_name);
         TextView lv_med_brand = gridView.findViewById(R.id.custom_med_view_brand);
 //        TextView lv_med_offer_price = gridView.findViewById(R.id.custom_med_offer_price);
@@ -103,6 +108,11 @@ public class custom_view_medicine extends BaseAdapter {
         lv_med_price.setTextColor(Color.WHITE);
         lv_med_price.setText(med_price.get(i));
 
+        SharedPreferences sh = PreferenceManager.getDefaultSharedPreferences(Context.getApplicationContext());
+        String hu = sh.getString("ip", "");
+        String url = "http://" + hu + ":5000" + med_img.get(i);
+
+        Picasso.with(Context.getApplicationContext()).load(url).into(lv_med_img);
 
         return gridView;
     }

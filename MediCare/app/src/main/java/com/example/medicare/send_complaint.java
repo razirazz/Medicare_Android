@@ -44,7 +44,7 @@ public class send_complaint extends AppCompatActivity implements View.OnClickLis
     public void onClick(View view) {
         String complaint = ed_complaint.getText().toString();
 
-        Toast.makeText(this, "complaint-------------------------"+complaint, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "complaint-------------------------"+complaint, Toast.LENGTH_SHORT).show();
 
         SharedPreferences sh= PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         String hu = sh.getString("ip", "");

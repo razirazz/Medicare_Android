@@ -105,7 +105,7 @@ public class online_med_Payment_page extends AppCompatActivity implements View.O
 
                     params.put("acc_no", bank_ac_no);
                     params.put("pin_no", bank_pin_no);
-                    params.put("med_book_id", sh.getString("med_book_id", ""));
+                    params.put("med_book_id", sh.getString("book_id", ""));
                     params.put("amount", sh.getString("amount", ""));
 
 

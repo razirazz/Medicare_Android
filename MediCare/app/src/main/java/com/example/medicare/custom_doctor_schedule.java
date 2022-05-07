@@ -100,7 +100,6 @@ public class custom_doctor_schedule extends BaseAdapter {
                 ed.putString("doc_sch_id", sch_id.get(pos));
                 ed.putString("hos_id", hos_id.get(pos));
                 ed.commit();
-                Toast.makeText(Context.getApplicationContext(), "-------------dov--------------------------------"+doc_id.get(pos), Toast.LENGTH_SHORT).show();
 
                 String hu = sh.getString("ip", "");
                 String url = "http://" + hu + ":5000/patient_book_doctors";

@@ -25,12 +25,5 @@ public class request_success_doc extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-    }
-
-    @Override
-    public void onBackPressed() {
-        Intent i = new Intent(getApplicationContext(), view_DoctorBooking.class);
-        startActivity(i);
     }
 }

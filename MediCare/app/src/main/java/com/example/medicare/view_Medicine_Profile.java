@@ -24,6 +24,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONObject;
 
@@ -42,6 +43,7 @@ public class view_Medicine_Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_medicine_profile);
 
+        med_img = findViewById(R.id.med_profile_med_img);
         med_name = findViewById(R.id.med_profile_med_name);
         med_brand = findViewById(R.id.med_profile_med_brand);
         med_description = findViewById(R.id.med_profile_descr);
@@ -49,6 +51,7 @@ public class view_Medicine_Profile extends AppCompatActivity {
         med_quantity = findViewById(R.id.quantity);
         buy = findViewById(R.id.med_profile_medicine_book_btn);
         cart = findViewById(R.id.med_profile_cart_btn);
+        cart.setVisibility(View.INVISIBLE);
 
         cart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -138,8 +141,12 @@ public class view_Medicine_Profile extends AppCompatActivity {
 //                                        Toast.makeText(getApplicationContext(), "medicine purchase request success", Toast.LENGTH_LONG).show();
                                              Intent i = new Intent(getApplicationContext(), view_MedicineBooking.class);
                                              startActivity(i);
+                                    }else if (sucs.equalsIgnoreCase("low")) {
+                                        Toast.makeText(getApplicationContext(), "insufficient Product Quantity", Toast.LENGTH_LONG).show();
+//                                             Intent i = new Intent(getApplicationContext(), view_MedicineBooking.class);
+//                                             startActivity(i);
                                     } else {
-                                        Toast.makeText(getApplicationContext(), "medicine purchase request error", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getApplicationContext(), "No Stock Available", Toast.LENGTH_LONG).show();
                                     }
                                 } catch (Exception e) {
                                     Toast.makeText(getApplicationContext(), "eeeee" + e.toString(), Toast.LENGTH_LONG).show();
@@ -207,6 +214,10 @@ public class view_Medicine_Profile extends AppCompatActivity {
                                 String price = jsonObj.getString("price");
                                 med_price.setTextColor(Color.WHITE);
                                 med_price.setText(price);
+
+                                String pic = jsonObj.getString("med_img");
+                                String url="http://" + hu + ":5000" + pic;
+                                Picasso.with(getApplicationContext()).load(url).into(med_img);
 
                             } else {
                                 Toast.makeText(getApplicationContext(), "Not found", Toast.LENGTH_LONG).show();

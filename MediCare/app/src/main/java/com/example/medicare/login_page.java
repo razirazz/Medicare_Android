@@ -39,6 +39,12 @@ public class login_page extends AppCompatActivity implements View.OnClickListene
     TextView sign_up;
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(getApplicationContext(), ip_connect.class));
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);

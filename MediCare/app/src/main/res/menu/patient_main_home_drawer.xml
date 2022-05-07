@@ -41,6 +41,10 @@
             android:icon="@drawable/pharmacy"
             android:title="@string/near_pharm" />
         <item
+            android:id="@+id/nav_complaint"
+            android:icon="@drawable/complaint"
+            android:title="@string/complaint" />
+        <item
             android:id="@+id/nav_log_out"
             android:icon="@drawable/logout"
             android:title="@string/log_out" />

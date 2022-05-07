@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -24,6 +25,19 @@ public class patient_main_home extends AppCompatActivity implements NavigationVi
 
     private AppBarConfiguration mAppBarConfiguration;
     private PatientMainHomeBinding binding;
+    private long pressedTime;
+
+    @Override
+    public void onBackPressed() {
+
+        if (pressedTime + 2000 > System.currentTimeMillis()) {
+            super.onBackPressed();
+            this.finishAffinity();
+        } else {
+            Toast.makeText(getApplicationContext(), "Press back again to exit", Toast.LENGTH_SHORT).show();
+        }
+        pressedTime = System.currentTimeMillis();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +95,9 @@ public class patient_main_home extends AppCompatActivity implements NavigationVi
         }else if (id == R.id.nav_pharmacy) {
             Intent ij=new Intent(getApplicationContext(), view_near_Pharmacy.class);
             startActivity(ij);
+        } else if(id == R.id.nav_complaint) {
+            Intent i = new Intent(getApplicationContext(), view_complaint.class);
+            startActivity(i);
         }else if (id == R.id.nav_log_out) {
             Intent ij=new Intent(getApplicationContext(),  login_page.class);
             startActivity(ij);

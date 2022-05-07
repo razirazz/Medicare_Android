@@ -36,7 +36,7 @@ public class view_complaint extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onBackPressed() {
-        Intent ij = new Intent(getApplicationContext(), patient_home.class);
+        Intent ij = new Intent(getApplicationContext(), patient_main_home.class);
         startActivity(ij);
     }
 

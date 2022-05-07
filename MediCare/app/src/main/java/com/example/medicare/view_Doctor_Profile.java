@@ -19,6 +19,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -36,6 +37,7 @@ public class view_Doctor_Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_doctor_profile);
 
+        doc_Image = findViewById(R.id.doctor_profile_img);
         doc_Name = findViewById(R.id.doc_profile_name);
         hos_Name = findViewById(R.id.doc_profile_Hos_name);
         department = findViewById(R.id.doc_profile_department);
@@ -93,6 +95,10 @@ public class view_Doctor_Profile extends AppCompatActivity {
                                 String mail = jsonObj.getString("email");
                                 email.setTextColor(Color.WHITE);
                                 email.setText(mail);
+
+                                String pic = jsonObj.getString("img");
+                                String url="http://" + hu + ":5000" + pic;
+                                Picasso.with(getApplicationContext()).load(url).into(doc_Image);
 
                             } else
                             {

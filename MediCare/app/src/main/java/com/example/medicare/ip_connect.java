@@ -17,6 +17,12 @@ public class ip_connect extends AppCompatActivity implements View.OnClickListene
     Button btn;
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        this.finishAffinity();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ip_connect);

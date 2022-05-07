@@ -2,6 +2,7 @@ package com.example.medicare;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -31,6 +32,12 @@ public class view_MedicineBooking extends AppCompatActivity {
     ArrayList<String> book_id, name, brand, date, amount, quantity;
     EditText search;
     Button pay;
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(getApplicationContext(), patient_main_home.class));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

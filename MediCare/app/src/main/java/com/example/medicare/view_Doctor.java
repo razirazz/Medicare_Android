@@ -19,6 +19,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -158,7 +159,6 @@ public class view_Doctor extends AppCompatActivity implements TextWatcher {
                                     department.add(jo.getString("doc_depart"));
                                     hospital_name.add(jo.getString("hos_name"));
 
-//                                    Toast.makeText(view_Doctor.this, "-------"+doctor_name, Toast.LENGTH_SHORT).show();
                                 }
 
                                 lv_doctor.setAdapter((ListAdapter) new custom_view_doctor(getApplicationContext(), doctor_id, doctor_img, doctor_name, department, hospital_name));

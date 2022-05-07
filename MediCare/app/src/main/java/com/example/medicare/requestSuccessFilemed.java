@@ -26,10 +26,4 @@ public class requestSuccessFilemed extends AppCompatActivity {
         });
 
     }
-
-    @Override
-    public void onBackPressed() {
-        Intent i = new Intent(getApplicationContext(), view_MedicineBooking.class);
-        startActivity(i);
-    }
 }
