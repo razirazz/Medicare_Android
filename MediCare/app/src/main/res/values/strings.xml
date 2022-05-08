@@ -80,6 +80,15 @@
     <string name="book_succes">Booking Success</string>
     <string name="quantity_head">Select your Quantity</string>
     <string name="quantity">Quantity</string>
+    <string name="welcome">Welcome to</string>
+    <string name="about">About</string>
+    <string name="about_medicare">Medicare is a web-application which customers can order their
+        medicine by uploading the picture of prescription and get the home delivery of medicine by
+        cash on delivery. Medicare solves the problem for people who lives in remote areas.
+        The people will get the service available at any time the customer can order their medicines
+        in 2 ways: By uploading the picture of prescription and By searching for a medicine.
+        Our aim is to provide medicine to patients at the doorstep and aware customers for online
+        medicine availability</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
